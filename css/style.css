@@ -531,6 +531,9 @@
 
 		.wrapper.style4 {
 			background: white;
+            padding-top:2.5em;
+            padding-right: 3em;
+            padding-left: 3em;
 		}
 
 		.wrapper.style5 {
@@ -667,7 +670,7 @@
 /* Banner */
 
 	#banner {
-		padding: 6em 0em 3em 0em;
+		padding-bottom:4px;
 		text-align: center;
 		text-transform: uppercase;
 		color: white;

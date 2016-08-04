@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+  <!--Add the title of your typeform below-->
+  <title>MVHS Chemistry: Onodera</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="description" content="This is the chemistry website created by Nathan Wong for Ms. Onodera of Monta Vista High School where students can find daily assignments, documents, and help." />
+	<meta name="keywords" content="Monta Vista High School, Chemistry, Ms. Onodera, Teaching" />
+	<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+  <script type="text/javascript" src="https://s3-eu-west-1.amazonaws.com/share.typeform.com/embed.js"></script>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.dropotron.min.js"></script>
+	<script src="js/skel.min.js"></script>
+	<script src="js/skel-layers.min.js"></script>
+	<script src="js/init.js"></script>
+	<noscript>
+		<link rel="stylesheet" href="css/skel.css" />
+		<link rel="stylesheet" href="css/style.css" />
+	</noscript>
+	<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	<link href="./images/favicon.ico" rel="icon" type="image/x-icon" />
+
+  <!--CSS styles that ensure your typeform takes up all the available screen space (DO NOT EDIT!)-->
+  <style type="text/css">
+   body {
+      min-height:100%;
+    }
+    .meme{
+      position:absolute;
+      width:100%;
+      height:1024px;
+    }
+    iframe{
+      left:0;
+      right:0;
+      bottom:0;
+      top:0;
+      border:0;
+    }
+  </style>
+</head>
+<body>
+  <div id="header">
+  <nav id="nav">
+    <ul>
+      <button class="button" id="lel" onClick="calendar()" style="padding:10px">Switch to Calendar View</button>
+      <li class="active"><a href="./index">Home</a></li>
+      <li>
+        <a href="./chapters">Chapter Documents</a>
+        <ul>
+          <li><a href="./finalexam">Final Exam Review</a></li><li><a href="./chapter0">Chapter 0</a></li>
+          <li><a href="./chapter1-2">Chapters 1-2</a></li>
+          <li><a href="./chapter3">Chapter 3</a></li>
+          <li><a href="./chapter4-5">Chapters 4-5</a></li>
+          <li><a href="./chapter6">Chapter 6</a></li>
+          <li><a href="./chapter7-9">Chapters 7-9</li>
+          <li><a href="./chapter10">Chapter 10</a></li>
+          <li><a href="./chapter11">Chapter 11</a></li>
+                <li><a href="./chapter12">Chapters 12</a></li>
+                <li><a href="./chapter13">Chapter 13</a></li>
+                <li><a href="./chapter14">Chapters 14</a></li>
+                <li><a href="./chapter15">Chapter 15</a></li>
+                <li><a href="./chapter16">Chapters 16</li>
+                <li><a href="./chapter17">Chapter 17</a></li>
+                <li><a href="./chapter18">Chapter 18</a></li>
+                <li><a href="./chapter19">Chapters 19</a></li>
+                <li><a href="./chapter20">Chapter 20</a></li>
+                <li><a href="./chapter22">Chapters 22</a></li>
+        </ul>
+      </li>
+      <li><a href="./about">Ms. Onodera</a></li>
+      <li><a href="./recletters">Rec Letters</a></li>
+
+      <li><a href="./calendar">Calendar</a></li>
+<li><a href="./conflict">Schedule Conflicts</a></li>
+    </ul>
+  </nav>
+</div>
+<div class="meme" id="memed">
+  <iframe id="typeform-full" width="100%" height="100%" frameborder="0" src="https://nathan2wong.typeform.com/to/mLlbUI"></iframe>
+</div>
+</body>
+<script>
+var toggle = document.getElementById("lel");
+var typeform = document.getElementById("typeform-full").src;
+var divsettings = document.getElementById("memed");
+var typeformsrc = "https://nathan2wong.typeform.com/to/mLlbUI";
+var calendarsrc = "https://calendar.google.com/calendar/embed?src=rdncijlorfpcese2l8055t63r4%40group.calendar.google.com&ctz=America/Los_Angeles";
+function fading() {
+  $(document).ready(function() {
+    $("button").click(function() {
+      $("memed").fadeToggle("slow");
+      calendar();
+    })
+  })
+}
+function calendar() {
+  if (typeform == typeformsrc) {
+  document.getElementById("typeform-full").setAttribute('src', calendarsrc);
+  typeform = calendarsrc;
+  toggle.innerHTML = "Switch to Form Submission";
+  }
+  else if (typeform == calendarsrc) {
+    document.getElementById("typeform-full").setAttribute('src', typeformsrc);
+    typeform = typeformsrc;
+    toggle.innerHTML = "Switch to Calendar View";
+  }
+  else {
+    document.getElementById("typeform-full").style.display = "none";
+    alert('Your browser is not compatible! Please visit https://calendar.google.com/calendar/embed?src=rdncijlorfpcese2l8055t63r4%40group.calendar.google.com&ctz=America/Los_Angeles instead.')
+  }
+}
+</script>
+</html>
